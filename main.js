@@ -126,13 +126,12 @@ btn.forEach(element => {
         console.log(element)
         element.classList.add("pressed")
         console.log(element)
-        
-        setInterval(btn.forEach(tran=>{
+        btn.forEach(tran=>{
             tran.addEventListener("transitionend",function(){
-                wait(200);
-            tran.classList.remove("pressed")
-            console.log("time out")}
+                wait(50);
+                tran.classList.remove("pressed")
+                console.log("time out")}
             )
-        }),10000)
+        })
     } )
 });
