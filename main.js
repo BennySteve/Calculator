@@ -111,7 +111,12 @@ function operand(v){
 }
 //EVENT
 btn.forEach(element => {
-    element.addEventListener("click", ()=>calculate(element.innerText) )
+    element.addEventListener("click", function(){
+        calculate(element.innerText)
+        console.log(element)
+        element.classList.add("pressed")
+        console.log(element)
+    } )
 });
 
 btn.forEach(tran=>{
