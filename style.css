@@ -70,7 +70,8 @@ color:#fcf5f5 ;
     margin-bottom: 10px;
 }
 
-.btn:hover{
+.pressed{
     background: #ffe8f8;
     color: #1c022e;
+    transition:  all .5s;
 }
