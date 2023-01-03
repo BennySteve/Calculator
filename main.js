@@ -109,6 +109,16 @@ function operand(v){
     checkPoint=0
     }
 }
+
+function wait (ms)  {
+    const start = Date.now();
+    let now = start;
+    while (now - start < ms) {
+      now = Date.now();
+    }
+}
+
+
 //EVENT
 btn.forEach(element => {
     element.addEventListener("click", function(){
@@ -116,11 +126,13 @@ btn.forEach(element => {
         console.log(element)
         element.classList.add("pressed")
         console.log(element)
+        
+        setInterval(btn.forEach(tran=>{
+            tran.addEventListener("transitionend",function(){
+                wait(200);
+            tran.classList.remove("pressed")
+            console.log("time out")}
+            )
+        }),10000)
     } )
 });
-
-btn.forEach(tran=>{
-    tran.addEventListener("transitionend",()=>
-    tran.classList.remove("pressed")
-    )
-})
