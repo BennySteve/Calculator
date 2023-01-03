@@ -113,3 +113,9 @@ function operand(v){
 btn.forEach(element => {
     element.addEventListener("click", ()=>calculate(element.innerText) )
 });
+
+btn.forEach(tran=>{
+    tran.addEventListener("transitionend",()=>
+    tran.classList.remove("pressed")
+    )
+})
