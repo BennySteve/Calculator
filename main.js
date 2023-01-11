@@ -124,7 +124,7 @@ btn.forEach(element => {
     element.addEventListener("click", function(){
         calculate(element.innerText)
         console.log(element)
-        element.classList.add("pressed")
+        /*element.classList.add("pressed")
         console.log(element)
         btn.forEach(tran=>{
             tran.addEventListener("transitionend",function(){
@@ -132,6 +132,6 @@ btn.forEach(element => {
                 tran.classList.remove("pressed")
                 console.log("time out")}
             )
-        })
+        })*/
     } )
 });
