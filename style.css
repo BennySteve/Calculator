@@ -31,7 +31,7 @@ color:#fcf5f5 ;
     
 }
 
-.btn:focus{
+button:focus{
     background: #ffe8f8;
     color: #1c022e;
     transition:  all .1s;
