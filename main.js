@@ -110,28 +110,37 @@ function operand(v){
     }
 }
 
+function transition(){
+    btn.forEach(tran=>{
+        tran.addEventListener("transitionend",()=>
+        tran.classList.remove("pressed")
+        )
+    })
+}
+
+
 function wait (ms)  {
-    const start = Date.now();
+    let start = Date.now();
+    //start%=100
     let now = start;
     while (now - start < ms) {
       now = Date.now();
+      //now%=100
     }
+    start=now=0
 }
-
 
 //EVENT
 btn.forEach(element => {
     element.addEventListener("click", function(){
         calculate(element.innerText)
-        console.log(element)
-        /*element.classList.add("pressed")
-        console.log(element)
-        btn.forEach(tran=>{
-            tran.addEventListener("transitionend",function(){
-                wait(50);
-                tran.classList.remove("pressed")
-                console.log("time out")}
-            )
-        })*/
+        element.getBoundingClientRect()
+        //console.log(element)
+        element.classList.add("pressed")
+        //console.log(element)
+        setTimeout(
+            function(){
+                element.classList.remove("pressed")
+            },300)
     } )
 });
