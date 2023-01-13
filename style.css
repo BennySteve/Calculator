@@ -31,16 +31,14 @@ color:#fcf5f5 ;
     
 }
 
-button:focus{
-    background: #ffe8f8;
-    color: #1c022e;
-    transition:  all .1s;
-}
 .btn,.dbl{
+    font-size: 24px;
     border-radius: 8%;
     box-shadow: 1px 1px 3px #292928;
     box-sizing: border-box;
     display: flex;
+    color: #FFF;
+    background-color:transparent;
     justify-content: center;
     align-items: center;
     border: #292928 0.1px solid;
@@ -75,8 +73,13 @@ button:focus{
     margin-bottom: 10px;
 }
 
+/*.btn:focus{
+    background: #ffe8f8;
+    color: #1c022e;
+    transition:  background-color .1s, color .1s;
+}*/
 .pressed{
     background: #ffe8f8;
     color: #1c022e;
-    transition:  all .5s;
+    
 }
